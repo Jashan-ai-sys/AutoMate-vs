@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS AUTOMATION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ✅ Corrected relative path -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header/Navigation Bar -->
+    <header class="header">
+        <div class="nav-left">
+            <button class="nav-btn" id="backBtn"><i class="fas fa-arrow-left"></i></button>
+            <button class="nav-btn" id="forwardBtn"><i class="fas fa-arrow-right"></i></button>
+            <button class="nav-btn" id="refreshBtn"><i class="fas fa-redo"></i></button>
+        </div>
+
+        <div class="address-bar-container">
+            <input type="text" class="address-bar" id="addressBar" placeholder="Enter URL or ask AI anything...">
+            <button class="voice-btn" id="voiceBtn"><i class="fas fa-microphone"></i></button>
+        </div>
+
+        <div class="nav-right">
+            <button class="nav-btn" id="extensionsBtn"><i class="fas fa-puzzle-piece"></i></button>
+            <button class="nav-btn" id="bookmarksBtn"><i class="fas fa-bookmark"></i></button>
+            <button class="nav-btn" id="settingsBtn"><i class="fas fa-cog"></i></button>
+            <div class="profile-icon" id="profileBtn">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tab Strip -->
+    <div class="tab-strip">
+        <div class="tab active" data-tab="1">
+            <span class="tab-title">New Tab</span>
+            <button class="tab-close"><i class="fas fa-times"></i></button>
+        </div>
+        <button class="new-tab-btn" id="newTabBtn"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <!-- AI Sidebar Panel -->
+            <aside class="ai-sidebar" id="aiSidebar">
+                <div class="sidebar-header">
+                    <h3><i class="fas fa-robot"></i> VS Automation Assistant</h3>
+                    <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="sidebar-content">
+                    <div class="ai-chat-container" id="aiChatContainer">
+                        <div class="ai-message">
+                            <p><strong>VS Automation Assistant:</strong> Hi! Ask me anything about this page or browse the web with AI.</p>
+                        </div>
+                    </div>
+                    <div class="ai-input-container">
+                        <input type="text" class="ai-input" id="aiInput" placeholder="Ask AI...">
+                        <button class="ai-send-btn" id="aiSendBtn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Browser View -->
+            <div class="browser-view" id="browserView">
+                <div class="homepage">
+                    <div class="logo-section">
+                        <h1 class="comet-logo"><i class="fas fa-meteor"></i> VS Automation</h1>
+                        <p class="tagline">AI-Powered Browsing Experience</p>
+                    </div>
+
+                    <div class="search-section">
+                        <input type="text" class="main-search" id="mainSearch" placeholder="Search or enter URL...">
+                    </div>
+
+                    <div class="quick-actions">
+                        <h3>Quick Actions</h3>
+                        <div class="action-grid">
+                            <div class="action-card">
+                                <i class="fas fa-search"></i>
+                                <p>AI Search</p>
+                            </div>
+                            <div class="action-card">
+                                <i class="fas fa-code"></i>
+                                <p>Code Help</p>
+                            </div>
+                            <div class="action-card">
+                                <i class="fas fa-book"></i>
+                                <p>Research</p>
+                            </div>
+                            <div class="action-card">
+                                <i class="fas fa-lightbulb"></i>
+                                <p>Ask Anything</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="toggle-sidebar-btn" id="toggleSidebar">
+                        <i class="fas fa-robot"></i> Open VS Automation Assistant
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Downloads Tray -->
+    <div class="downloads-tray" id="downloadsTray">
+        <div class="downloads-header">
+            <h4><i class="fas fa-download"></i> Downloads</h4>
+            <button class="close-downloads" id="closeDownloads"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="downloads-list">
+            <p class="no-downloads">No downloads yet</p>
+        </div>
+    </div>
+
+    <!-- Context Menu -->
+    <div class="context-menu" id="contextMenu">
+        <ul>
+            <li><i class="fas fa-copy"></i> Copy</li>
+            <li><i class="fas fa-paste"></i> Paste</li>
+            <li class="separator"></li>
+            <li><i class="fas fa-robot"></i> Explain with AI</li>
+            <li><i class="fas fa-file-alt"></i> Summarize selection</li>
+        </ul>
+    </div>
+
+    <!-- ✅ Correct JS Path -->
+    <script src="script.js"></script>
+</body>
+</html>
